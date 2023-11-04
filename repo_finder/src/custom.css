@@ -6,18 +6,34 @@
   --primary-800: #eb5e28;
 }
 
+.main-heading {
+  background-color: var(--primary-400);
+  color: var(--primary-50);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 16px;
+  position: relative;
+  z-index: 2;
+}
+
 .app-container {
     display: flex;
     justify-content: center;
     height: 100vh; /* Adjust the height as needed */
     background-color: var(--primary-800); /* Use Chakra UI color for background */
+    position: relative;
+    z-index: 1;
   }
   
   .main-content {
     max-width: 75%;
+    width: 100%;
+    height: 100vh;
     margin: auto;
     padding: 16px; /* Adjust padding as needed */
     background-color: var(--primary-400); /* Use Chakra UI color for background */
     color: var(--primary-50); /* Set text color for main-content only */
   }
   
+  .half-width {
+    width: 50%;
+  }
