@@ -58,13 +58,13 @@ function MainContent() {
 
   const handleClick = async () => {
     localStorage.clear();
+    runSearch(selected);
     if (showResults) {
       // Go back to the main content form
       setShowResults(false);
     } else {
       // Show search results
       setShowResults(true);
-      await runSearch(selected);
       processLocalStorageData(); // Process data after search is complete
     }
   };

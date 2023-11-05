@@ -2,7 +2,7 @@
 
 import { Octokit } from "octokit";
 
-const authKey = "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"
+const authKey = "ENTER YOUR GITHUB PERSONAL ACCESS TOKEN HERE"
 
 const octokit = new Octokit({
     auth: authKey, // Use the read key as the authentication token
@@ -42,7 +42,7 @@ async function getResults(query, owner, stars, lastUpdated, selectedLanguages) {
         if (queryString.endsWith('+')) {
             queryString = queryString.slice(0, -1);
         }
-        
+
         // Use the queryString in your GET request
         let response = await octokit.request(`GET ${queryString}`, {
             per_page: 10,
